@@ -1,0 +1,6 @@
+{
+  "name": "Trading Bot Solution Explorer",
+  "description": "A web UI mapping the complete Python solution for the Binance Futures Testnet Trading Bot task.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

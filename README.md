@@ -1,45 +1,20 @@
-# Binance Futures Testnet Trading Bot
+<div align="center">
+<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
+</div>
 
-A lightweight, well-structured Python CLI application to place Market and Limit orders on the Binance Futures Testnet (USDT-M).
+# Run and deploy your AI Studio app
 
-## Setup & Installation
+This contains everything you need to run your app locally.
 
-1. Create a virtual environment:
-   ```bash
-   python -m venv venv
-   source venv/bin/activate  # On Windows: venv\Scripts\activate
-   ```
+View your app in AI Studio: https://ai.studio/apps/ec94f546-1605-49a9-90c6-2907e17c8771
 
-2. Install the required dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
+## Run Locally
 
-3. Set your Binance Futures Testnet API credentials as environment variables:
-   ```bash
-   # Mac/Linux
-   export BINANCE_TESTNET_API_KEY="your_api_key_here"
-   export BINANCE_TESTNET_API_SECRET="your_api_secret_here"
-   
-   # Windows (PowerShell)
-   $env:BINANCE_TESTNET_API_KEY="your_api_key_here"
-   $env:BINANCE_TESTNET_API_SECRET="your_api_secret_here"
-   ```
+**Prerequisites:**  Node.js
 
-## How to Run Examples
 
-**1. Place a Market Buy Order:**
-```bash
-python cli.py --symbol BTCUSDT --side BUY --type MARKET --quantity 0.01
-```
-
-**2. Place a Limit Sell Order:**
-```bash
-python cli.py --symbol ETHUSDT --side SELL --type LIMIT --quantity 0.1 --price 3500
-```
-
-## Architecture & Considerations
-- **No external SDK bloat**: Implements a clean, bare-metal REST client using `requests` with direct HMAC SHA256 signature generation to demonstrate complete API architecture understanding.
-- **Modular Design**: Separates execution logic (`cli.py`), network communication (`client.py`), business logic (`orders.py`), and safety validations (`validators.py`).
-- **Robust Error Handling**: Safely catches HTTP errors from Binance and prints user-friendly messaging to stderr on validation failures.
-- **Dual Logging**: Logs every execution locally to `trading_bot.log` and streams high-level output to the console.
+1. Install dependencies:
+   `npm install`
+2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
+3. Run the app:
+   `npm run dev`
